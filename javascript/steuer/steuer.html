@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steuer</title>
+    <link rel="stylesheet" href="steuer.css">
+    <script>
+        "use strict";
+        function berechnen() {
+            let netto;
+            let steuersatz;
+            let steuer;
+            let brutto;
+
+            netto = document.getElementById("netto").value;
+            steuersatz = document.getElementById("steuersatz").value;
+
+            steuer = netto * steuersatz / 100;
+            brutto = +netto + +steuer;
+
+            document.getElementById("steuer").value = steuer
+            document.getElementById("brutto").value = brutto;
+        }
+       
+    </script>
+</head>
+<body>
+    <h2>Berechnung Verbrauch</h2>
+    <form id="form1">
+        <label for="netto">Netto</label>
+        <input type="text" name="netto" id="netto"> <br>
+        
+        <label for="steuersatz">Steuersatz</label>
+        <input type="text" name="steuersatz" id="steuersatz"> <br>
+        
+        <label for="steuer">Steuer</label>
+        <input type="text" name="steuer" id="steuer"> <br>
+
+        <label for="brutto">Brutto</label>
+        <input type="text" name="brutto" id="brutto"> <br>
+    </form>
+    <br><br>
+    <button type="button" onclick="berechnen()">Berechnen</button><br><br>
+    
+</body>
+</html>
