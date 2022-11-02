@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eingabe/Ausgabe</title>
+    <link rel="stylesheet" href="form_Durchschnittsverbrauch.css">
+    <script>
+        "use strict";
+        function berechnen() {
+            let gefkm;
+            let gesverbrauch;
+            let schnitt;
+            let kostenhundert;
+            let literpreis;
+
+            gefkm = document.getElementById("wert1").value;
+            gesverbrauch = document.getElementById("wert2").value;
+            schnitt = gesverbrauch *100/gefkm  ;
+            schnitt = Math.round(schnitt * 100)/ 100;
+            document.getElementById("schnitt").value = schnitt;
+            literpreis = document.getElementById("literpreis").value;
+
+            kostenhundert = schnitt * literpreis;
+            kostenhundert = Math.round(kostenhundert * 100)/ 100;
+            document.getElementById("kostenhundert").value = kostenhundert;
+
+        }
+       
+    </script>
+</head>
+<body>
+    <h2>Berechnung Verbrauch</h2>
+    <form id="form1">
+        <label for="wert1">Gefahrene Kilometer:</label>
+        <input type="text" name="wert1" id="wert1"> <br>
+        
+        <label for="wert2">Verbrauch in Liter:</label>
+        <input type="text" name="wert2" id="wert2"> <br>
+
+        <label for="schnitt">Durchschnittsverbrauch:</label>
+        <input type="text" name="schnitt" id="schnitt"> <br>
+
+        <label for="literpreis">Literpreis:</label>
+        <input type="text" name="literpreis" id="literpreis" value="1.99"> <br>
+
+        <label for="kostenhundert">Kosten pro 100km:</label>
+        <input type="text" name="kostenhundert" id="kostenhundert"> <br>
+        
+        
+    </form>
+    <br><br>
+    <button type="button" onclick="berechnen()">Berechnen</button><br><br>
+    
+    
+    
+</body>
+</html>
