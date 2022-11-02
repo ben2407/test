@@ -1,0 +1,21 @@
+label {
+    display: inline-block;
+    width: 200px;
+}
+
+input {
+    width: 100px;
+    background-color: lightgray;
+}
+
+#form1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: bisque;
+    width: 350px;
+    height: 100px;
+    padding: 20px 20px 20px 20px;
+}
+
+button {
+    width: 120px;
+}
